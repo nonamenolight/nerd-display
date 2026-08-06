@@ -18,7 +18,7 @@ pages = [
     IconPage(
         "assets/png/tux.png",
         "Linux",
-        "The foundation of everything"
+        "Foundation of Everything"
     ),
 
     IconPage(
