@@ -1,46 +1,72 @@
 import pygame
 import time
 
+from display.pages import IconPage
+
+
 pygame.init()
 
+
 screen = pygame.display.set_mode(
-    (800, 600)
+    (2560,1440),
+    pygame.FULLSCREEN
 )
 
-pygame.display.set_caption(
-    "Nerd Display"
-)
 
-font = pygame.font.Font(
-    None,
-    80
-)
+pages = [
 
-running = True
+    IconPage(
+        "assets/png/tux.png",
+        "Linux",
+        "The foundation of everything"
+    ),
 
-while running:
+    IconPage(
+        "assets/png/docker.png",
+        "Docker",
+        "Container Runtime"
+    ),
+
+    IconPage(
+        "assets/png/kubernetes.png",
+        "Kubernetes",
+        "Container Orchestration"
+    ),
+
+]
+
+
+index = 0
+
+
+clock = pygame.time.Clock()
+
+
+while True:
+
 
     for event in pygame.event.get():
+
         if event.type == pygame.QUIT:
-            running = False
+            pygame.quit()
+            exit()
 
-    screen.fill((0, 0, 0))
 
-    text = font.render(
-        "NERD LAB",
-        True,
-        (255, 255, 255)
-    )
+        if event.type == pygame.KEYDOWN:
 
-    rect = text.get_rect(
-        center=(400,300)
-    )
+            if event.key == pygame.K_ESCAPE:
+                pygame.quit()
+                exit()
 
-    screen.blit(
-        text,
-        rect
-    )
+
+    pages[index].render(screen)
 
     pygame.display.flip()
 
-pygame.quit()
+
+    time.sleep(5)
+
+
+    index = (
+        index + 1
+    ) % len(pages)
