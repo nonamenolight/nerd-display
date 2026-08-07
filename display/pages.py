@@ -12,6 +12,26 @@ class IconPage:
         ).convert_alpha()
 
 
+    def fit_image(self, max_size=512):
+
+        width, height = self.image.get_size()
+
+        ratio = min(
+            max_size / width,
+            max_size / height
+        )
+
+        new_size = (
+            int(width * ratio),
+            int(height * ratio)
+        )
+
+        return pygame.transform.smoothscale(
+            self.image,
+            new_size
+        )
+
+
     def render(self, screen):
 
         screen.fill((0, 0, 0))
@@ -20,10 +40,7 @@ class IconPage:
 
 
         # logo
-        image = pygame.transform.smoothscale(
-            self.image,
-            (512, 512)
-        )
+        image = self.fit_image(512)
 
         rect = image.get_rect(
             center=(width // 2, height // 2 - 100)
@@ -58,7 +75,6 @@ class IconPage:
 
 
         # subtitle
-
         if self.subtitle:
 
             sub_font = pygame.font.SysFont(
