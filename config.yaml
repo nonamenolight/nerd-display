@@ -1,0 +1,18 @@
+assets:
+  icon_dir: assets/icons/png
+
+display:
+  interval: 5
+
+pages:
+  - name: Linux
+    icon: Linux.png
+    slogan: Open Source Operating System
+
+  - name: Docker
+    icon: Docker.png
+    slogan: Container Platform
+
+  - name: Kubernetes
+    icon: Kubernetes.png
+    slogan: Container Orchestration

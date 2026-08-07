@@ -13,27 +13,21 @@ screen = pygame.display.set_mode(
 )
 
 
-pages = [
+from display.config import load_config
 
-    IconPage(
-        "assets/png/tux.png",
-        "Linux",
-        "Foundation of Everything"
-    ),
+config = load_config()
 
-    IconPage(
-        "assets/png/docker.png",
-        "Docker",
-        "Container Runtime"
-    ),
+icon_dir = config["assets"]["icon_dir"]
+pages = []
 
-    IconPage(
-        "assets/png/kubernetes.png",
-        "Kubernetes",
-        "Container Orchestration"
-    ),
-
-]
+for item in config["pages"]:
+    pages.append(
+        IconPage(
+            f"{icon_dir}/{item['icon']}",
+            item["name"],
+            item["slogan"]
+        )
+    )
 
 
 index = 0
