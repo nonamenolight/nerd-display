@@ -9,14 +9,13 @@ HEIGHT=512
 
 mkdir -p "$DST_DIR"
 
+# 清理旧 png
+rm -f "$DST_DIR"/*.png
+
 for svg in "$SRC_DIR"/*.svg
 do
     filename=$(basename "$svg" .svg)
 
-    # 转换文件名:
-    # 空格 -> -
-    # 大写 -> 小写
-    # 连续特殊字符处理
     output=$(echo "$filename" \
         | sed 's/ /-/g' \
         | tr '[:upper:]' '[:lower:]')
