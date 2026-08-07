@@ -25,7 +25,7 @@ pages:
     icon: github.png
     slogan: Git Repository
 
-  - name: Github Action
+  - name: Github Actions
     icon: github-actions.png
     slogan: Easily build, package, release, update, and deploy
 
