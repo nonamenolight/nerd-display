@@ -25,9 +25,17 @@ pages:
     icon: github.png
     slogan: Git Repository
 
+  - name: Github Action
+    icon: github-actions.png
+    slogan: Easily build, package, release, update, and deploy
+
   - name: Gitlab
     icon: gitlab.png
-    slogan: Container Orchestration
+    slogan: Self-hosted Git Repository
+
+  - name: Gitea
+    icon: gitea.png
+    slogan: Light Version of Gitlab
 
   - name: Jenkins
     icon: jenkins.png
