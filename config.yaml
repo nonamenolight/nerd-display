@@ -6,13 +6,53 @@ display:
 
 pages:
   - name: Linux
-    icon: Linux.png
+    icon: linux.png
     slogan: Open Source Operating System
 
   - name: Docker
-    icon: Docker.png
+    icon: docker.png
     slogan: Container Platform
 
   - name: Kubernetes
-    icon: Kubernetes.png
+    icon: kubernetes.png
     slogan: Container Orchestration
+
+  - name: Git
+    icon: git.png
+    slogan: Distributed Version Control
+
+  - name: GitHub
+    icon: github.png
+    slogan: Git Repository
+
+  - name: Gitlab
+    icon: gitlab.png
+    slogan: Container Orchestration
+
+  - name: Jenkins
+    icon: jenkins.png
+    slogan: Automation Server
+
+  - name: Prometheus
+    icon: prometheus.png
+    slogan: Monitoring & Alerting
+  
+  - name: Grafana
+    icon: grafana.png
+    slogan: Observability Dashboard
+
+  - name: Terraform
+    icon: terraform.png
+    slogan: Infrastructure as Code
+
+  - name: Ansible
+    icon: ansible.png
+    slogan: Configuration Automation
+
+  - name: Helm
+    icon: helm.png
+    slogan: Kubernetes Package Manager
+
+  - name: Gitea
+    icon: gitea.png
+    slogan: Self-hosted Git Service
